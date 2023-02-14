@@ -1,35 +1,9 @@
+import {getComputerChoice, getPlayerChoice} from "./getChoiceFunctions.js";
+
 const rockPaperScissors = ["rock", "paper", "scissors"];
 
-//FUNCTIONS TO GET USER AND COMPUTER'S CHOISES
-
-function getPlayerChoice(){
-    let playerInput = prompt("Please choose: Rock, Scissors or Paper?");
-    let formattedPlayerInput = playerInput.toLowerCase();
-if(
-    formattedPlayerInput != "rock"
-    && formattedPlayerInput != "paper"
-    && formattedPlayerInput != "scissors"){
-    do{
-
-        playerInput = prompt("You should choose from the list!");
-        formattedPlayerInput = playerInput.toLowerCase();
-
-    }while(
-        formattedPlayerInput != "rock" 
-        && formattedPlayerInput != "paper" 
-        && formattedPlayerInput != "scissors"
-      );
-}
-return formattedPlayerInput;
-}
-
-function getComputerChoice(rockPaperScissors){
-    let randomElement = Math.floor(Math.random() * rockPaperScissors.length)
-    return rockPaperScissors[randomElement];
-}
-const computerChoice = getComputerChoice(rockPaperScissors);
-
 function round(playerChoice, computerChoice){
+    //function to play 1 round and return the result
     
     if(playerChoice === "scissors" && computerChoice === "paper"){
         return "You win!";
@@ -59,6 +33,7 @@ function round(playerChoice, computerChoice){
         return "Tie game!"
     }
 }
+
 function game(){
     
     let roundWinner ="";
@@ -75,22 +50,23 @@ function game(){
         if(roundWinner === "You win!"){
             
             playerScore++;
-            console.log("player won this round");
+            console.log("PLAYER WON THIS ROUND!");
             console.log(`playerScore = ${playerScore}`);
 
         }else if(roundWinner === "You lose!"){
             
             computerScore++;
-            console.log("computer won this round");
+            console.log("COMPUTER WON THIS ROUND!");
             console.log(`computerScore = ${computerScore}`);
 
-    } else{console.log("Round draw!")}   
+    } else{console.log("ROUND DRAW!")}   
     }
     if(computerScore === 5){
         console.log("You lost this game :(")
     }else if(playerScore === 5){
-        return "You won!"
+        console.log("You won this game!")
     }
     
 }
+
 game();
