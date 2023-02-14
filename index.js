@@ -24,8 +24,8 @@ return formattedPlayerInput;
 }
 
 function getComputerChoice(rockPaperScissors){
-    
-    return rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
+    let randomElement = Math.floor(Math.random() * rockPaperScissors.length)
+    return rockPaperScissors[randomElement];
 }
 const computerChoice = getComputerChoice(rockPaperScissors);
 
@@ -34,21 +34,28 @@ function round(playerChoice, computerChoice){
     if(playerChoice === "scissors" && computerChoice === "paper"){
         return "You win!";
     }
+
     else if (playerChoice === "scissors" && computerChoice === "rock"){
         return "You lose!";
     }
+
     else if(playerChoice === "rock" && computerChoice === "paper"){
         return "You lose!";
     }
+
     else if(playerChoice === "rock" && computerChoice === "scissors"){
         return "You win!";
     }
+
     else if(playerChoice === "paper" && computerChoice === "rock"){
         return "You win!";
     }
+
     else if(playerChoice === "paper" && computerChoice === "scissors"){
         return "You lose!";
-    }else if (playerChoice === computerChoice){
+    }
+    
+    else if (playerChoice === computerChoice){
         return "Tie game!"
     }
 }
