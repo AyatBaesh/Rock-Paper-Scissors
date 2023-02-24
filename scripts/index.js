@@ -39,12 +39,9 @@ function game(){
     let roundWinner ="";
     let playerScore = 0;
     let computerScore = 0;
-    while(playerScore < 5 && computerScore < 5){
+    // while(playerScore < 5 && computerScore < 5){
         let computerChoice = getComputerChoice(rockPaperScissors);
         let playerChoice = getPlayerChoice();
-
-        console.log(`computer choice: ${computerChoice}`);
-        console.log(`player choice: ${playerChoice}`)
         roundWinner = round(playerChoice, computerChoice);
 
         if(roundWinner === "You win!"){
@@ -60,7 +57,7 @@ function game(){
             console.log(`computerScore = ${computerScore}`);
 
     } else{console.log("ROUND DRAW!")}   
-    }
+    // }
     if(computerScore === 5){
         console.log("You lost this game :(")
     }else if(playerScore === 5){
