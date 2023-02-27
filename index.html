@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "./styles.css">
+    <script type = "module" src = "scripts/index.js" defer></script>
     <title>Rock-Paper-Scissors</title>
 </head>
 <body>
@@ -11,21 +13,29 @@
         <div id = "gameStart">
             <button id="startGame">Start the Game</button>
         </div>
-        <h1>Choose your weapon</h1>
+
         <div id = "choice-buttons">
             <button class = "player-choice" value = "rock" id = "rock" disabled>Rock</button>
             <button class = "player-choice" value = "paper" id = "paper" disabled>Paper</button>
             <button class = "player-choice" value = "scissors" id = "scissors" disabled>Scissors</button>
         </div>
-        <div class = "results">
-            <span class = "score">
+        <div class = "results-section">
+            <div class = "round-info">
+                <p>Rounds played: <span id = "roundCounter">0</span></p>
+            </div>
+            <div class = "score">
                 Your score: <span id="playerScore">0</span>
-            </span>
-                <span class = "score">
+            </div>
+                <div class = "score">
                     Computer score: <span id = "computerScore">0</span>
-                </span>
+                </div>
+                <div class = "game-result">
+                    <span id = "win"></span>
+                    <span id = "lose"></span>
+                    <button id = "newGame">Want to play again?</button>
+                </div>
         </div>
     </div>
-    <script type = "module" src = "scripts/index.js"></script>
+
 </body>
 </html>
