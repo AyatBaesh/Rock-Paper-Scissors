@@ -1,30 +1,29 @@
 
+    // if(playerChoice === "scissors" && computerChoice === "paper"){
 
-function getPlayerChoice(){ 
-    let playerInput = prompt("Please choose: Rock, Scissors or Paper?");
-    let formattedPlayerInput = playerInput.toLowerCase();//making user's input case insensible
-if(//checking user's input to be correct
-    formattedPlayerInput != "rock" && 
-    formattedPlayerInput != "paper" &&
-    formattedPlayerInput != "scissors"){
-    do{
+    //     return "You win!";
+    // }
 
-        playerInput = prompt("You should choose from the list!");
-        formattedPlayerInput = playerInput.toLowerCase();
+    // else if (playerChoice === "scissors" && computerChoice === "rock"){
+    //     return "You lose!";
+    // }
 
-    }while(
-        formattedPlayerInput != "rock" &&
-        formattedPlayerInput != "paper" &&
-        formattedPlayerInput != "scissors"
-      );
-}
-return formattedPlayerInput;
-}
+    // else if(playerChoice === "rock" && computerChoice === "paper"){
+    //     return "You lose!";
+    // }
 
-function getComputerChoice(rockPaperScissors){//making random computer choice
-    let randomElement = Math.floor(Math.random() * rockPaperScissors.length);
+    // else if(playerChoice === "rock" && computerChoice === "scissors"){
+    //     return "You win!";
+    // }
 
-    return rockPaperScissors[randomElement];
-}
+    // else if(playerChoice === "paper" && computerChoice === "rock"){
+    //     return "You win!";
+    // }
 
-export{getComputerChoice, getPlayerChoice} 
+    // else if(playerChoice === "paper" && computerChoice === "scissors"){
+    //     return "You lose!";
+    // }
+    
+    // else if (playerChoice === computerChoice){
+    //     return "Tie game!"
+    // }
