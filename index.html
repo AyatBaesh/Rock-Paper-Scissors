@@ -10,30 +10,22 @@
 </head>
 <body>
     <div class = "main-container">
-        <div id = "gameStart">
-            <button id="startGame">Start the Game</button>
-        </div>
-
-        <div id = "choice-buttons">
-            <button class = "player-choice" value = "rock" id = "rock" disabled>Rock</button>
-            <button class = "player-choice" value = "paper" id = "paper" disabled>Paper</button>
-            <button class = "player-choice" value = "scissors" id = "scissors" disabled>Scissors</button>
+        <h1>Are you ready?</h1>
+        <h2>Make your choice:</h2>
+        <div id = "choiceButtons">
+            <button class = "player-choice" value = "rock" id = "rock">Rock</button>
+            <button class = "player-choice" value = "paper" id = "paper">Paper</button>
+            <button class = "player-choice" value = "scissors" id = "scissors">Scissors</button>
         </div>
         <div class = "results-section">
             <div class = "round-info">
                 <p>Rounds played: <span id = "roundCounter">0</span></p>
+                <p>Your score:<span id="playerScore">0</span></p>
+                <p>Computer score:<span id = "computerScore">0</span></p>
             </div>
-            <div class = "score">
-                Your score: <span id="playerScore">0</span>
+            <div class = "game-results">
+                <button id = "newGame">Want to play again?</button>
             </div>
-                <div class = "score">
-                    Computer score: <span id = "computerScore">0</span>
-                </div>
-                <div class = "game-result">
-                    <span id = "win"></span>
-                    <span id = "lose"></span>
-                    <button id = "newGame">Want to play again?</button>
-                </div>
         </div>
     </div>
 
