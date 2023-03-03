@@ -49,15 +49,15 @@ function updateGame(roundWinner) {
       break;
     case "player":
       playerScore++;
-      playerScoreEl.textContent = playerScore;
+      playerScoreEl.textContent = `Your score: ${playerScore}`;
       break;
     case "computer":
       computerScore++;
-      computerScoreEl.textContent = computerScore;
+      computerScoreEl.textContent = `Computer score: ${computerScore}`;
       break;
   }
   roundCounter++;
-  roundsPlayedEl.textContent = roundCounter;
+  roundsPlayedEl.textContent = `Rounds played: ${roundCounter}`;
 
   // Check for end of game
   if (playerScore === 5) {
@@ -73,11 +73,11 @@ function disableButtons(buttons) {
     });
   }
   
-  function enableButtons(buttons) {
-    buttons.forEach((button) => {
-      button.disabled = false;
-    });
-  }
+function enableButtons(buttons) {
+  buttons.forEach((button) => {
+    button.disabled = false;
+  });
+}
 
 // Show the game over message and disable the choice buttons
 function showGameOverMessage(message) {
@@ -96,9 +96,9 @@ function startNewGame() {
   computerScore = 0;
   playerScore = 0;
   roundCounter = 0;
-  computerScoreEl.textContent = computerScore;
-  playerScoreEl.textContent = playerScore;
-  roundsPlayedEl.textContent = roundCounter;
+  computerScoreEl.textContent = `Computer score: ${computerScore}`;
+  playerScoreEl.textContent = `Your score: ${playerScore}`;
+  roundsPlayedEl.textContent = `Rounds played: ${roundCounter}`;
   gameResultsSection.removeChild(document.querySelector(".game-over"));
   enableButtons(choiceButtons);
   newGameButton.style.visibility = "hidden";

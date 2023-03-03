@@ -10,24 +10,34 @@
 </head>
 <body>
     <div class = "main-container">
-        <h1>Are you ready?</h1>
-        <h2>Make your choice:</h2>
+        <header class = "game-header">
+            <figure>
+                <figcaption>Rock  - Paper - Scissors</figcaption>
+                <img src = "./images/logo.png" alt = "Rock-Paper-Scissors Logo">
+                
+            </figure>    
+        </header>
+        <h1>Make your choice:</h1>
         <div id = "choiceButtons">
-            <button class = "player-choice" value = "rock" id = "rock">Rock</button>
-            <button class = "player-choice" value = "paper" id = "paper">Paper</button>
-            <button class = "player-choice" value = "scissors" id = "scissors">Scissors</button>
+            <button class = "player-choice btn" value = "rock" id = "rock">Rock</button>
+            <button class = "player-choice btn" value = "paper" id = "paper">Paper</button>
+            <button class = "player-choice btn" value = "scissors" id = "scissors">Scissors</button>
         </div>
         <div class = "results-section">
             <div class = "round-info">
-                <p>Rounds played: <span id = "roundCounter">0</span></p>
-                <p>Your score:<span id="playerScore">0</span></p>
-                <p>Computer score:<span id = "computerScore">0</span></p>
+                <p class = "results round" id = "roundCounter">Rounds played: 0</p>
+                <p class = "results player" id="playerScore">Your score: 0</p>
+                <p class = "results computer" id = "computerScore">Computer score: 0</p>
             </div>
             <div class = "game-results">
-                <button id = "newGame">Want to play again?</button>
+                <button class = "btn" id = "newGame">Start new game</button>
             </div>
         </div>
     </div>
 
 </body>
 </html>
+
+<!-- <p class = "results round">Rounds played: <span id = "roundCounter">0</span></p>
+                <p class = "results player">Your score: <span id="playerScore">0</span></p>
+                <p class = "results computer">Computer score: <span id = "computerScore">0</span></p> -->

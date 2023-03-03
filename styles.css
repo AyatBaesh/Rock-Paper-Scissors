@@ -1,3 +1,86 @@
+/* GENERAL STYLING */
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+body{
+background-color:rgb(66,69,73);
+max-width: 1080px;
+margin: auto;
+}
+.main-container{
+    color: rgba(255, 255, 255, 1);
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HEADER STYLING */
+figcaption{
+    font-size: 48px;
+}
+img{
+    margin: 3vh auto;
+}
+h1{
+    margin-bottom: 1.5vh;
+}
+/* BUTTONS STYLING */
+#choiceButtons{
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+}
+.btn{
+    width: 15vw;
+    height:5vh;
+    color:white;
+    background-color: rgb(114,137,218);
+    border: 1px solid rgb(66,69,73);
+    border-radius: 5px;
+}
+.btn:active{
+    background-color: rgb(54,57,62);
+    border: 1px solid rgb(114,137,218);
+}
+.btn:disabled{
+    visibility: hidden;
+}
 #newGame{
     visibility:hidden;
+    width:25vw;
+    margin-top: 1.5vh;
+}
+
+/* RESULTS SECTION STYLING */
+.game-over{
+    font-size: 36px;
+}
+.results-section{
+    width:100%;
+    margin:2.5vh auto;
+    font-size:24px;
+
+}
+.game-results{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:1.5vh;
+}
+.results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.round{
+    margin:1.5vh auto;
+}
+.player, .computer{
+    display:inline-block; 
 }
